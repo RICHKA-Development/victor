@@ -468,7 +468,7 @@ declare class Victor
 
 	map(fn:(number) => number):Victor;
 
-	let(fn:(Victor) => Victor):Victor;
+	let<T>(fn:(Victor) => Victor):T;
 }
 
 export = Victor;
