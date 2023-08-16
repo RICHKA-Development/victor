@@ -467,6 +467,8 @@ declare class Victor
     isEqualTo(vector:Victor):boolean;
 
 	map(fn:(number) => number):Victor;
+
+	let(fn:(Victor) => Victor):Victor;
 }
 
 export = Victor;
