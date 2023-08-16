@@ -1263,13 +1263,13 @@ function degrees2radian (deg) {
 }
 
 Victor.prototype.flip = function () {
-	return Victor(this.y, this.x)
+	return Victor(this.y, this.x);
 }
 
 Victor.prototype.map = function (fn) {
-	return Victor(fn(this.x), fn(this.y))
+	return Victor(fn(this.x), fn(this.y));
 }
 
 Victor.prototype.let = function (fn) {
-	return fn(this.clone())
+	return fn(this.clone());
 }
