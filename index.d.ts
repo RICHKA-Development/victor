@@ -472,6 +472,7 @@ declare class Victor
 
 	unit:Victor;
 	zero:Victor;
+	normBase:Victor;
 }
 
 export = Victor;

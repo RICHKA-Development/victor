@@ -1275,4 +1275,5 @@ Victor.prototype.let = function (fn) {
 }
 
 Victor.zero = Victor(0, 0)
-Victor.unit = Victor(1, 0)
+Victor.normBase = Victor(1, 0)
+Victor.unit = Victor(1, 1)
