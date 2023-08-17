@@ -1274,6 +1274,14 @@ Victor.prototype.let = function (fn) {
 	return fn(this.clone());
 }
 
-Victor.zero = Victor(0, 0)
-Victor.normBase = Victor(1, 0)
-Victor.unit = Victor(1, 1)
+Victor.prototype.zero = function () {
+	return Victor(0, 0)
+}
+
+Victor.prototype.normBase = function () {
+	return Victor(1, 0)
+}
+
+Victor.prototype.unit = function () {
+	return Victor(1, 1)
+}

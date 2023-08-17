@@ -343,11 +343,13 @@ declare class Victor
      * Rounds both axis to a certain precision.
      */
     toFixed():Victor;
-	//
-    // /**
-    //  * Sets the vector to zero (0,0).
-    //  */
-    // zero():Victor;
+
+    /**
+     * Sets the vector to zero (0,0).
+     */
+    get zero():Victor;
+	get unit():Victor;
+	get normBase():Victor;
 
     /**
      * Projects a vector onto another vector, setting itself to the result.
@@ -469,10 +471,6 @@ declare class Victor
 	map(fn:(number) => number):Victor;
 
 	let<T>(fn:(Victor) => Victor):T;
-
-	unit:Victor;
-	zero:Victor;
-	normBase:Victor;
 }
 
 export = Victor;
