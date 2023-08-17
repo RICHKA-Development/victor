@@ -1273,3 +1273,6 @@ Victor.prototype.map = function (fn) {
 Victor.prototype.let = function (fn) {
 	return fn(this.clone());
 }
+
+Victor.zero = Victor(0, 0)
+Victor.unit = Victor(1, 0)
