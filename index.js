@@ -1262,7 +1262,7 @@ function degrees2radian (deg) {
 	return deg / degrees;
 }
 
-Victor.prototype.flip = function () {
+Victor.prototype.swap = function () {
 	return Victor(this.y, this.x);
 }
 

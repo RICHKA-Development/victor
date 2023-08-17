@@ -355,7 +355,7 @@ declare class Victor
      */
     projectOnto(vector:Victor):Victor;
 
-	flip():Victor;
+	swap():Victor;
 
     /**
      * Returns the dot product of two vectors.
