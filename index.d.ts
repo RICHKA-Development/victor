@@ -374,17 +374,17 @@ declare class Victor
     /**
      * Returns the length / magnitude.
      */
-    length():number;
+	get length():number;
 
     /**
      * Alias for length.
      */
-    magnitude():number;
+	get magnitude():number;
 
     /**
      * Returns the squared length / magnitude. If the length is only needed for comparison, this function is faster than length.
      */
-    lengthSq():number;
+	get lengthSq():number;
 
     /**
      * Returns the distance of the X component from another vector.
@@ -425,42 +425,42 @@ declare class Victor
     /**
      * Returns the angle towards X in radians.
      */
-    horizontalAngle():number;
+	get horizontalAngle():number;
 
     /**
      * Alias for horizontalAngle.
      */
-    angle():number;
+	get angle():number;
 
     /**
      * Alias for horizontalAngle.
      */
-    direction():number;
+	get direction():number;
 
     /**
      * Same as horizontalAngle but returns degrees.
      */
-    horizontalAngleDeg():number;
+	get horizontalAngleDeg():number;
 
     /**
      * Alias for horizontalAngleDeg.
      */
-    angleDeg():number;
+	get angleDeg():number;
 
     /**
      * Returns the angle towards Y in radians.
      */
-    verticalAngle():number;
+	get verticalAngle():number;
 
     /**
      * Same as verticalAngle but returns degrees.
      */
-    verticalAngleDeg():number;
+	get verticalAngleDeg():number;
 
     /**
      * Returns a true if vector is (0, 0).
      */
-    isZero():boolean;
+	get isZero():boolean;
 
     /**
      * Returns a true if this vector is the same as another.
