@@ -347,9 +347,9 @@ declare class Victor
     /**
      * Sets the vector to zero (0,0).
      */
-    get zero():Victor;
-	get unit():Victor;
-	get normBase():Victor;
+    static get zero():Victor;
+	static get unit():Victor;
+	static get normBase():Victor;
 
     /**
      * Projects a vector onto another vector, setting itself to the result.
