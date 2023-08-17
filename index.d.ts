@@ -13,6 +13,9 @@ declare class Victor
 {
     x:number;
     y:number;
+	static zero: Victor;
+	static unit: Victor;
+	static positiveNorm: Victor;
 
     /**
      * Can be used without the new keyword.
@@ -347,9 +350,6 @@ declare class Victor
     /**
      * Sets the vector to zero (0,0).
      */
-    static get zero():Victor;
-	static get unit():Victor;
-	static get normBase():Victor;
 
     /**
      * Projects a vector onto another vector, setting itself to the result.
@@ -471,6 +471,8 @@ declare class Victor
 	map(fn:(number) => number):Victor;
 
 	let<T>(fn:(Victor) => Victor):T;
+
+	zero:Victor
 }
 
 export = Victor;

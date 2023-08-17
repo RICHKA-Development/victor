@@ -1285,3 +1285,7 @@ Victor.prototype.normBase = function () {
 Victor.prototype.unit = function () {
 	return Victor(1, 1)
 }
+
+Victor.zero = Victor.create(0, 0)
+Victor.unit = Victor.create(1, 1)
+Victor.positiveNorm = Victor.create(1, 0)
