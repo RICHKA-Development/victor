@@ -982,9 +982,32 @@ Victor.prototype.verticalAngleDeg = function () {
 	return radian2degrees(this.verticalAngle());
 };
 
-Victor.prototype.angle = Victor.prototype.horizontalAngle;
-Victor.prototype.angleDeg = Victor.prototype.horizontalAngleDeg;
-Victor.prototype.direction = Victor.prototype.horizontalAngle;
+Object.defineProperties(
+	Victor.prototype,
+	{
+		length: {
+			get: function () {
+				return Math.sqrt(this.lengthSq());
+			}
+		},
+
+		angle: {
+			get: Victor.prototype.horizontalAngle
+		},
+		angleDeg: {
+			get: Victor.prototype.horizontalAngleDeg
+		},
+		direction: {
+			get: Victor.prototype.horizontalAngle
+		},
+		isZero: {
+			get: function() {
+				return this.x === 0 && this.y === 0;
+			}
+		},
+	}
+);
+
 
 Victor.prototype.rotate = function (angle) {
 	return Victor(
@@ -1140,9 +1163,6 @@ Victor.prototype.distanceSq = function (vec) {
  * @return {Number} Length / Magnitude
  * @api public
  */
-Victor.prototype.length = function () {
-	return Math.sqrt(this.lengthSq());
-};
 
 /**
  * Squared length / magnitude
@@ -1174,9 +1194,6 @@ Victor.prototype.magnitude = Victor.prototype.length;
  * @return {Boolean}
  * @api public
  */
-Victor.prototype.isZero = function() {
-	return this.x === 0 && this.y === 0;
-};
 
 /**
  * Returns a true if this vector is the same as another
