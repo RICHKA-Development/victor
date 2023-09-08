@@ -1,4 +1,4 @@
-exports = module.exports = Victor
+exports = module.exports = Victor;
 
 /**
  * # Victor - A JavaScript 2D vector class with methods for common vector operations
@@ -16,9 +16,9 @@ exports = module.exports = Victor
  * @return {Victor}
  * @api public
  */
-function Victor(x, y) {
+function Victor (x, y) {
 	if (!(this instanceof Victor)) {
-		return new Victor(x, y)
+		return new Victor(x, y);
 	}
 
 	/**
@@ -32,7 +32,7 @@ function Victor(x, y) {
 	 *
 	 * @api public
 	 */
-	this.x = x || 0
+	this.x = x || 0;
 
 	/**
 	 * The Y axis
@@ -45,8 +45,8 @@ function Victor(x, y) {
 	 *
 	 * @api public
 	 */
-	this.y = y || 0
-}
+	this.y = y || 0;
+};
 
 /**
  * # Static
@@ -67,8 +67,8 @@ function Victor(x, y) {
  * @api public
  */
 Victor.fromArray = function (arr) {
-	return new Victor(arr[0] || 0, arr[1] || 0)
-}
+	return new Victor(arr[0] || 0, arr[1] || 0);
+};
 
 /**
  * Creates a new instance from an object
@@ -85,8 +85,8 @@ Victor.fromArray = function (arr) {
  * @api public
  */
 Victor.fromObject = function (obj) {
-	return new Victor(obj.x || 0, obj.y || 0)
-}
+	return new Victor(obj.x || 0, obj.y || 0);
+};
 
 Victor.create = Victor
 
@@ -112,8 +112,8 @@ Victor.create = Victor
  * @api public
  */
 Victor.prototype.addX = function (vec) {
-	return Victor(this.x + vec.x, this.y)
-}
+	return Victor(this.x + vec.x, this.y);
+};
 
 /**
  * Adds another vector's Y axis to this one
@@ -131,8 +131,8 @@ Victor.prototype.addX = function (vec) {
  * @api public
  */
 Victor.prototype.addY = function (vec) {
-	return Victor(this.x, this.y + vec.y)
-}
+	return Victor(this.x, this.y + vec.y);
+};
 
 /**
  * Adds another vector to this one
@@ -150,8 +150,8 @@ Victor.prototype.addY = function (vec) {
  * @api public
  */
 Victor.prototype.add = function (vec) {
-	return Victor(this.x + vec.x, this.y + vec.y)
-}
+	return Victor(this.x + vec.x, this.y + vec.y);
+};
 
 /**
  * Adds the given scalar to both vector axis
@@ -168,8 +168,8 @@ Victor.prototype.add = function (vec) {
  * @api public
  */
 Victor.prototype.addScalar = function (scalar) {
-	return Victor(this.x + scalar, this.y + scalar)
-}
+	return Victor(this.x + scalar, this.y + scalar);
+};
 
 /**
  * Adds the given scalar to the X axis
@@ -186,8 +186,8 @@ Victor.prototype.addScalar = function (scalar) {
  * @api public
  */
 Victor.prototype.addScalarX = function (scalar) {
-	return Victor(this.x + scalar, this.y)
-}
+	return Victor(this.x + scalar, this.y);
+};
 
 /**
  * Adds the given scalar to the Y axis
@@ -204,9 +204,9 @@ Victor.prototype.addScalarX = function (scalar) {
  * @api public
  */
 Victor.prototype.addScalarY = function (scalar) {
-	this.y += scalar
-	return this
-}
+	this.y += scalar;
+	return this;
+};
 
 /**
  * Subtracts the X axis of another vector from this one
@@ -225,7 +225,7 @@ Victor.prototype.addScalarY = function (scalar) {
  */
 Victor.prototype.subtractX = function (vec) {
 	return Victor(this.x - vec.x, this.y)
-}
+};
 
 /**
  * Subtracts the Y axis of another vector from this one
@@ -244,7 +244,7 @@ Victor.prototype.subtractX = function (vec) {
  */
 Victor.prototype.subtractY = function (vec) {
 	return Victor(this.x, this.y - vec.y)
-}
+};
 
 /**
  * Subtracts another vector from this one
@@ -263,7 +263,7 @@ Victor.prototype.subtractY = function (vec) {
  */
 Victor.prototype.subtract = function (vec) {
 	return Victor(this.x - vec.x, this.y - vec.y)
-}
+};
 
 /**
  * Subtracts the given scalar from both axis
@@ -280,8 +280,8 @@ Victor.prototype.subtract = function (vec) {
  * @api public
  */
 Victor.prototype.subtractScalar = function (scalar) {
-	return Victor(this.x - scalar, this.y - scalar)
-}
+	return Victor(this.x - scalar, this.y - scalar);
+};
 
 /**
  * Subtracts the given scalar from the X axis
@@ -298,8 +298,8 @@ Victor.prototype.subtractScalar = function (scalar) {
  * @api public
  */
 Victor.prototype.subtractScalarX = function (scalar) {
-	return Victor(this.x - scalar, this.y)
-}
+	return Victor(this.x - scalar, this.y);
+};
 
 /**
  * Subtracts the given scalar from the Y axis
@@ -316,8 +316,8 @@ Victor.prototype.subtractScalarX = function (scalar) {
  * @api public
  */
 Victor.prototype.subtractScalarY = function (scalar) {
-	return Victor(this.x, this.y - scalar)
-}
+	return Victor(this.x, this.y - scalar);
+};
 
 /**
  * Divides the X axis by the x component of given vector
@@ -335,8 +335,8 @@ Victor.prototype.subtractScalarY = function (scalar) {
  * @api public
  */
 Victor.prototype.divideX = function (vector) {
-	return Victor(this.x / vector.x, this.y)
-}
+	return Victor(this.x / vector.x, this.y);
+};
 
 /**
  * Divides the Y axis by the y component of given vector
@@ -354,8 +354,8 @@ Victor.prototype.divideX = function (vector) {
  * @api public
  */
 Victor.prototype.divideY = function (vector) {
-	return Victor(this.x, this.y / vector.y)
-}
+	return Victor(this.x, this.y / vector.y);
+};
 
 /**
  * Divides both vector axis by a axis values of given vector
@@ -373,8 +373,8 @@ Victor.prototype.divideY = function (vector) {
  * @api public
  */
 Victor.prototype.divide = function (vector) {
-	return Victor(this.x / vector.x, this.y / vector.y)
-}
+	return Victor(this.x / vector.x, this.y / vector.y);
+};
 
 /**
  * Divides both vector axis by the given scalar value
@@ -392,11 +392,11 @@ Victor.prototype.divide = function (vector) {
  */
 Victor.prototype.divideScalar = function (scalar) {
 	if (scalar !== 0) {
-		return Victor(this.x / scalar, this.y / scalar)
+		return Victor(this.x / scalar, this.y / scalar);
 	} else {
 		return Victor.zero()
 	}
-}
+};
 
 /**
  * Divides the X axis by the given scalar value
@@ -414,11 +414,11 @@ Victor.prototype.divideScalar = function (scalar) {
  */
 Victor.prototype.divideScalarX = function (scalar) {
 	if (scalar !== 0) {
-		return Victor(this.x / scalar, this.y)
+		return Victor(this.x / scalar, this.y);
 	} else {
-		return Victor(0, this.y)
+		return Victor(0, this.y);
 	}
-}
+};
 
 /**
  * Divides the Y axis by the given scalar value
@@ -436,11 +436,11 @@ Victor.prototype.divideScalarX = function (scalar) {
  */
 Victor.prototype.divideScalarY = function (scalar) {
 	if (scalar !== 0) {
-		return Victor(this.x, this.y / scalar)
+		return Victor(this.x, this.y / scalar);
 	} else {
-		return Victor(this.x, 0)
+		return Victor(this.x, 0);
 	}
-}
+};
 
 /**
  * Inverts the X axis
@@ -456,8 +456,8 @@ Victor.prototype.divideScalarY = function (scalar) {
  * @api public
  */
 Victor.prototype.invertX = function () {
-	return Victor(this.x * -1, this.y)
-}
+	return Victor(this.x * -1, this.y);
+};
 
 /**
  * Inverts the Y axis
@@ -473,8 +473,8 @@ Victor.prototype.invertX = function () {
  * @api public
  */
 Victor.prototype.invertY = function () {
-	return Victor(this.x, this.y * -1)
-}
+	return Victor(this.x, this.y * -1);
+};
 
 /**
  * Inverts both axis
@@ -490,8 +490,8 @@ Victor.prototype.invertY = function () {
  * @api public
  */
 Victor.prototype.invert = function () {
-	return this.invertX().invertY()
-}
+	return this.invertX().invertY();
+};
 
 /**
  * Multiplies the X axis by X component of given vector
@@ -509,8 +509,8 @@ Victor.prototype.invert = function () {
  * @api public
  */
 Victor.prototype.multiplyX = function (vector) {
-	return Victor(this.x * vector.x, this.y)
-}
+	return Victor(this.x * vector.x, this.y);
+};
 
 /**
  * Multiplies the Y axis by Y component of given vector
@@ -528,8 +528,8 @@ Victor.prototype.multiplyX = function (vector) {
  * @api public
  */
 Victor.prototype.multiplyY = function (vector) {
-	return Victor(this.x, this.y * vector.y)
-}
+	return Victor(this.x, this.y * vector.y);
+};
 
 /**
  * Multiplies both vector axis by values from a given vector
@@ -547,8 +547,8 @@ Victor.prototype.multiplyY = function (vector) {
  * @api public
  */
 Victor.prototype.multiply = function (vector) {
-	return Victor(this.x * vector.x, this.y * vector.y)
-}
+	return Victor(this.x * vector.x, this.y * vector.y);
+};
 
 /**
  * Multiplies both vector axis by the given scalar value
@@ -565,8 +565,8 @@ Victor.prototype.multiply = function (vector) {
  * @api public
  */
 Victor.prototype.multiplyScalar = function (scalar) {
-	return Victor(this.x * scalar, this.y * scalar)
-}
+	return Victor(this.x * scalar, this.y * scalar);
+};
 
 /**
  * Multiplies the X axis by the given scalar
@@ -583,8 +583,8 @@ Victor.prototype.multiplyScalar = function (scalar) {
  * @api public
  */
 Victor.prototype.multiplyScalarX = function (scalar) {
-	return Victor(this.x * scalar, this.y)
-}
+	return Victor(this.x * scalar, this.y);
+};
 
 /**
  * Multiplies the Y axis by the given scalar
@@ -601,8 +601,8 @@ Victor.prototype.multiplyScalarX = function (scalar) {
  * @api public
  */
 Victor.prototype.multiplyScalarY = function (scalar) {
-	return Victor(this.x, this.y * scalar)
-}
+	return Victor(this.x, this.y * scalar);
+};
 
 /**
  * Normalize
@@ -612,15 +612,15 @@ Victor.prototype.multiplyScalarY = function (scalar) {
  */
 Victor.prototype.normalize = function () {
 	if (this.length() === 0) {
-		this.x = 1
-		this.y = 0
-		return Victor(1, 0)
+		this.x = 1;
+		this.y = 0;
+		return Victor(1, 0);
 	} else {
-		return this.divide(Victor(this.length(), this.length()))
+		return this.divide(Victor(this.length(), this.length()));
 	}
-}
+};
 
-Victor.prototype.norm = Victor.prototype.normalize
+Victor.prototype.norm = Victor.prototype.normalize;
 
 /**
  * If the absolute vector axis is greater than `max`, multiplies the axis by `factor`
@@ -641,8 +641,8 @@ Victor.prototype.limit = function (max, factor) {
 	return Victor(
 		Math.abs(this.x) > max ? this.x * factor : this.x,
 		Math.abs(this.y) > max ? this.y * factor : this.y
-	)
-}
+	);
+};
 
 /**
  * Randomizes both vector axis with a value between 2 vectors
@@ -660,11 +660,8 @@ Victor.prototype.limit = function (max, factor) {
  * @api public
  */
 Victor.prototype.randomize = function (topLeft, bottomRight) {
-	return this.randomizeX(topLeft, bottomRight).randomizeY(
-		topLeft,
-		bottomRight
-	)
-}
+	return this.randomizeX(topLeft, bottomRight).randomizeY(topLeft, bottomRight);
+};
 
 /**
  * Randomizes the y axis with a value between 2 vectors
@@ -682,10 +679,10 @@ Victor.prototype.randomize = function (topLeft, bottomRight) {
  * @api public
  */
 Victor.prototype.randomizeX = function (topLeft, bottomRight) {
-	const min = Math.min(topLeft.x, bottomRight.x)
-	const max = Math.max(topLeft.x, bottomRight.x)
-	return Victor(random(min, max), this.y)
-}
+	const min = Math.min(topLeft.x, bottomRight.x);
+	const max = Math.max(topLeft.x, bottomRight.x);
+	return Victor(random(min, max), this.y);
+};
 
 /**
  * Randomizes the y axis with a value between 2 vectors
@@ -703,10 +700,10 @@ Victor.prototype.randomizeX = function (topLeft, bottomRight) {
  * @api public
  */
 Victor.prototype.randomizeY = function (topLeft, bottomRight) {
-	const min = Math.min(topLeft.y, bottomRight.y)
-	const max = Math.max(topLeft.y, bottomRight.y)
-	return Victor(this.x, random(min, max))
-}
+	const min = Math.min(topLeft.y, bottomRight.y);
+	const max = Math.max(topLeft.y, bottomRight.y);
+	return Victor(this.x, random(min, max));
+};
 
 /**
  * Randomly randomizes either axis between 2 vectors
@@ -724,13 +721,13 @@ Victor.prototype.randomizeY = function (topLeft, bottomRight) {
  * @api public
  */
 Victor.prototype.randomizeAny = function (topLeft, bottomRight) {
-	if (Math.round(Math.random())) {
-		this.randomizeX(topLeft, bottomRight)
+	if (!! Math.round(Math.random())) {
+		this.randomizeX(topLeft, bottomRight);
 	} else {
-		this.randomizeY(topLeft, bottomRight)
+		this.randomizeY(topLeft, bottomRight);
 	}
-	return this
-}
+	return this;
+};
 
 /**
  * Rounds both axis to an integer value
@@ -746,8 +743,8 @@ Victor.prototype.randomizeAny = function (topLeft, bottomRight) {
  * @api public
  */
 Victor.prototype.unfloat = function () {
-	return Victor(Math.round(this.x), Math.round(this.y))
-}
+	return Victor(Math.round(this.x), Math.round(this.y));
+};
 
 /**
  * Rounds both axis to a certain precision
@@ -764,14 +761,9 @@ Victor.prototype.unfloat = function () {
  * @api public
  */
 Victor.prototype.toFixed = function (precision) {
-	if (typeof precision === 'undefined') {
-		precision = 8
-	}
-	return Victor(
-		Number(this.x.toFixed(precision)),
-		Number(this.y.toFixed(precision))
-	)
-}
+	if (typeof precision === 'undefined') { precision = 8; }
+	return Victor(Number(this.x.toFixed(precision)), Number(this.y.toFixed(precision)));
+};
 
 /**
  * Performs a linear blend / interpolation of the X axis towards another vector
@@ -791,10 +783,10 @@ Victor.prototype.toFixed = function (precision) {
  */
 Victor.prototype.mixX = function (vec, amount) {
 	if (typeof amount === 'undefined') {
-		amount = 0.5
+		amount = 0.5;
 	}
-	return Victor((1 - amount) * this.x + amount * vec.x, this.y)
-}
+	return Victor((1 - amount) * this.x + amount * vec.x, this.y);
+};
 
 /**
  * Performs a linear blend / interpolation of the Y axis towards another vector
@@ -814,10 +806,10 @@ Victor.prototype.mixX = function (vec, amount) {
  */
 Victor.prototype.mixY = function (vec, amount) {
 	if (typeof amount === 'undefined') {
-		amount = 0.5
+		amount = 0.5;
 	}
-	return Victor(this.x, (1 - amount) * this.y + amount * vec.y)
-}
+	return Victor(this.x, (1 - amount) * this.y + amount * vec.y);
+};
 
 /**
  * Performs a linear blend / interpolation towards another vector
@@ -836,8 +828,8 @@ Victor.prototype.mixY = function (vec, amount) {
  * @api public
  */
 Victor.prototype.mix = function (vec, amount) {
-	return this.mixX(vec, amount).mixY(vec, amount)
-}
+	return this.mixX(vec, amount).mixY(vec, amount);
+};
 
 /**
  * # Products
@@ -857,8 +849,8 @@ Victor.prototype.mix = function (vec, amount) {
  * @api public
  */
 Victor.prototype.clone = function () {
-	return new Victor(this.x, this.y)
-}
+	return new Victor(this.x, this.y);
+};
 
 /**
  * Copies another vector's X component in to its own
@@ -875,8 +867,9 @@ Victor.prototype.clone = function () {
  * @api public
  */
 Victor.prototype.copyX = function (vec) {
-	return Victor(vec.x, this.y)
-}
+	return Victor(vec.x, this.y);
+
+};
 
 /**
  * Copies another vector's Y component in to its own
@@ -893,8 +886,8 @@ Victor.prototype.copyX = function (vec) {
  * @api public
  */
 Victor.prototype.copyY = function (vec) {
-	return Victor(this.x, vec.y)
-}
+	return Victor(this.x, vec.y);
+};
 
 /**
  * Copies another vector's X and Y components in to its own
@@ -911,8 +904,8 @@ Victor.prototype.copyY = function (vec) {
  * @api public
  */
 Victor.prototype.copy = function (vec) {
-	return this.copyX(vec).copyY(vec)
-}
+	return this.copyX(vec).copyY(vec);
+};
 
 /**
  * Sets the vector to zero (0,0)
@@ -928,7 +921,7 @@ Victor.prototype.copy = function (vec) {
  */
 Victor.prototype.zero = function () {
 	return Victor(0, 0)
-}
+};
 
 /**
  * Calculates the dot product of this vector and another
@@ -945,12 +938,12 @@ Victor.prototype.zero = function () {
  * @api public
  */
 Victor.prototype.dot = function (vec2) {
-	return this.x * vec2.x + this.y * vec2.y
-}
+	return this.x * vec2.x + this.y * vec2.y;
+};
 
 Victor.prototype.cross = function (vec2) {
-	return this.x * vec2.y - this.y * vec2.x
-}
+	return (this.x * vec2.y ) - (this.y * vec2.x );
+};
 
 /**
  * Projects a vector onto another vector, setting itself to the result.
@@ -968,62 +961,61 @@ Victor.prototype.cross = function (vec2) {
  * @api public
  */
 Victor.prototype.projectOnto = function (vec2) {
-	const coeff =
-		(this.x * vec2.x + this.y * vec2.y) /
-		(vec2.x * vec2.x + vec2.y * vec2.y)
+    const coeff = ( (this.x * vec2.x)+(this.y * vec2.y) ) / ((vec2.x*vec2.x)+(vec2.y*vec2.y));
 	return Victor(coeff * vec2.x, coeff * vec2.y)
-}
+};
+
 
 Victor.prototype.horizontalAngle = function () {
-	return Math.atan2(this.y, this.x)
-}
+	return Math.atan2(this.y, this.x);
+};
 
 Victor.prototype.horizontalAngleDeg = function () {
-	return radian2degrees(this.horizontalAngle())
-}
+	return radian2degrees(this.horizontalAngle());
+};
 
 Victor.prototype.verticalAngle = function () {
-	return Math.atan2(this.x, this.y)
-}
+	return Math.atan2(this.x, this.y);
+};
 
 Victor.prototype.verticalAngleDeg = function () {
-	return radian2degrees(this.verticalAngle())
-}
+	return radian2degrees(this.verticalAngle());
+};
 
-Victor.prototype.angle = Victor.prototype.horizontalAngle
-Victor.prototype.angleDeg = Victor.prototype.horizontalAngleDeg
-Victor.prototype.direction = Victor.prototype.horizontalAngle
+Victor.prototype.angle = Victor.prototype.horizontalAngle;
+Victor.prototype.angleDeg = Victor.prototype.horizontalAngleDeg;
+Victor.prototype.direction = Victor.prototype.horizontalAngle;
 
 Victor.prototype.rotate = function (angle) {
 	return Victor(
-		this.x * Math.cos(angle) - this.y * Math.sin(angle),
-		this.x * Math.sin(angle) + this.y * Math.cos(angle)
-	)
-}
+		(this.x * Math.cos(angle)) - (this.y * Math.sin(angle)),
+		(this.x * Math.sin(angle)) + (this.y * Math.cos(angle))
+	);
+};
 
 Victor.prototype.rotateDeg = function (angle) {
-	angle = degrees2radian(angle)
-	return this.rotate(angle)
-}
+	angle = degrees2radian(angle);
+	return this.rotate(angle);
+};
 
-Victor.prototype.rotateTo = function (rotation) {
-	return this.rotate(rotation - this.angle())
-}
+Victor.prototype.rotateTo = function(rotation) {
+	return this.rotate(rotation-this.angle());
+};
 
-Victor.prototype.rotateToDeg = function (rotation) {
-	rotation = degrees2radian(rotation)
-	return this.rotateTo(rotation)
-}
+Victor.prototype.rotateToDeg = function(rotation) {
+	rotation = degrees2radian(rotation);
+	return this.rotateTo(rotation);
+};
 
 Victor.prototype.rotateBy = function (rotation) {
-	const angle = this.angle() + rotation
-	return this.rotate(angle)
-}
+	const angle = this.angle() + rotation;
+	return this.rotate(angle);
+};
 
 Victor.prototype.rotateByDeg = function (rotation) {
-	rotation = degrees2radian(rotation)
-	return this.rotateBy(rotation)
-}
+	rotation = degrees2radian(rotation);
+	return this.rotateBy(rotation);
+};
 
 /**
  * Calculates the distance of the X axis between this vector and another
@@ -1040,8 +1032,8 @@ Victor.prototype.rotateByDeg = function (rotation) {
  * @api public
  */
 Victor.prototype.distanceX = function (vec) {
-	return this.x - vec.x
-}
+	return this.x - vec.x;
+};
 
 /**
  * Same as `distanceX()` but always returns an absolute number
@@ -1058,8 +1050,8 @@ Victor.prototype.distanceX = function (vec) {
  * @api public
  */
 Victor.prototype.absDistanceX = function (vec) {
-	return Math.abs(this.distanceX(vec))
-}
+	return Math.abs(this.distanceX(vec));
+};
 
 /**
  * Calculates the distance of the Y axis between this vector and another
@@ -1076,8 +1068,8 @@ Victor.prototype.absDistanceX = function (vec) {
  * @api public
  */
 Victor.prototype.distanceY = function (vec) {
-	return this.y - vec.y
-}
+	return this.y - vec.y;
+};
 
 /**
  * Same as `distanceY()` but always returns an absolute number
@@ -1094,8 +1086,8 @@ Victor.prototype.distanceY = function (vec) {
  * @api public
  */
 Victor.prototype.absDistanceY = function (vec) {
-	return Math.abs(this.distanceY(vec))
-}
+	return Math.abs(this.distanceY(vec));
+};
 
 /**
  * Calculates the euclidean distance between this vector and another
@@ -1112,8 +1104,8 @@ Victor.prototype.absDistanceY = function (vec) {
  * @api public
  */
 Victor.prototype.distance = function (vec) {
-	return Math.sqrt(this.distanceSq(vec))
-}
+	return Math.sqrt(this.distanceSq(vec));
+};
 
 /**
  * Calculates the squared euclidean distance between this vector and another
@@ -1131,10 +1123,10 @@ Victor.prototype.distance = function (vec) {
  */
 Victor.prototype.distanceSq = function (vec) {
 	var dx = this.distanceX(vec),
-		dy = this.distanceY(vec)
+		dy = this.distanceY(vec);
 
-	return dx * dx + dy * dy
-}
+	return dx * dx + dy * dy;
+};
 
 /**
  * Calculates the length or magnitude of the vector
@@ -1149,8 +1141,8 @@ Victor.prototype.distanceSq = function (vec) {
  * @api public
  */
 Victor.prototype.length = function () {
-	return Math.sqrt(this.lengthSq())
-}
+	return Math.sqrt(this.lengthSq());
+};
 
 /**
  * Squared length / magnitude
@@ -1165,10 +1157,10 @@ Victor.prototype.length = function () {
  * @api public
  */
 Victor.prototype.lengthSq = function () {
-	return this.x * this.x + this.y * this.y
-}
+	return this.x * this.x + this.y * this.y;
+};
 
-Victor.prototype.magnitude = Victor.prototype.length
+Victor.prototype.magnitude = Victor.prototype.length;
 
 /**
  * Returns a true if vector is (0, 0)
@@ -1182,9 +1174,9 @@ Victor.prototype.magnitude = Victor.prototype.length
  * @return {Boolean}
  * @api public
  */
-Victor.prototype.isZero = function () {
-	return this.x === 0 && this.y === 0
-}
+Victor.prototype.isZero = function() {
+	return this.x === 0 && this.y === 0;
+};
 
 /**
  * Returns a true if this vector is the same as another
@@ -1199,9 +1191,9 @@ Victor.prototype.isZero = function () {
  * @return {Boolean}
  * @api public
  */
-Victor.prototype.isEqualTo = function (vec2) {
-	return this.x === vec2.x && this.y === vec2.y
-}
+Victor.prototype.isEqualTo = function(vec2) {
+	return this.x === vec2.x && this.y === vec2.y;
+};
 
 /**
  * # Utility Methods
@@ -1220,8 +1212,8 @@ Victor.prototype.isEqualTo = function (vec2) {
  * @api public
  */
 Victor.prototype.toString = function () {
-	return 'x:' + this.x + ', y:' + this.y
-}
+	return 'x:' + this.x + ', y:' + this.y;
+};
 
 /**
  * Returns an array representation of the vector
@@ -1236,8 +1228,8 @@ Victor.prototype.toString = function () {
  * @api public
  */
 Victor.prototype.toArray = function () {
-	return [this.x, this.y]
-}
+	return [ this.x, this.y ];
+};
 
 /**
  * Returns an object representation of the vector
@@ -1252,33 +1244,34 @@ Victor.prototype.toArray = function () {
  * @api public
  */
 Victor.prototype.toObject = function () {
-	return { x: this.x, y: this.y }
+	return { x: this.x, y: this.y };
+};
+
+
+var degrees = 180 / Math.PI;
+
+function random (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-var degrees = 180 / Math.PI
-
-function random(min, max) {
-	return Math.floor(Math.random() * (max - min + 1) + min)
+function radian2degrees (rad) {
+	return rad * degrees;
 }
 
-function radian2degrees(rad) {
-	return rad * degrees
-}
-
-function degrees2radian(deg) {
-	return deg / degrees
+function degrees2radian (deg) {
+	return deg / degrees;
 }
 
 Victor.prototype.swap = function () {
-	return Victor(this.y, this.x)
+	return Victor(this.y, this.x);
 }
 
 Victor.prototype.map = function (fn) {
-	return Victor(fn(this.x), fn(this.y))
+	return Victor(fn(this.x), fn(this.y));
 }
 
 Victor.prototype.let = function (fn) {
-	return fn(this.clone())
+	return fn(this.clone());
 }
 
 Victor.prototype.zero = function () {
