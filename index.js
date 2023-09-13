@@ -394,7 +394,7 @@ Victor.prototype.divideScalar = function (scalar) {
 	if (scalar !== 0) {
 		return Victor(this.x / scalar, this.y / scalar);
 	} else {
-		return Victor.zero()
+		return Victor.zero
 	}
 };
 
