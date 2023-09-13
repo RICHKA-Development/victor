@@ -38,6 +38,8 @@ declare class Victor
      */
     static fromObject(obj:VictorCoordinates):Victor;
 
+	static fromCoord(obj:VictorCoordinates):Victor;
+
     /**
      * Creates a new Victor with the same X and Y components.
      */

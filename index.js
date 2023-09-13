@@ -90,6 +90,8 @@ Victor.fromObject = function (obj) {
 
 Victor.create = Victor
 
+Victor.fromCoord = Victor.fromObject
+
 /**
  * # Manipulation
  *
