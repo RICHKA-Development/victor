@@ -9,6 +9,12 @@ interface VictorCoordinates
     y:number
 }
 
+interface  VictorSize
+{
+	w:number
+	h:number
+}
+
 declare class Victor
 {
     x:number;
@@ -39,6 +45,8 @@ declare class Victor
     static fromObject(obj:VictorCoordinates):Victor;
 
 	static fromCoord(obj:VictorCoordinates):Victor;
+
+	static fromSize(obj:VictorSize):Victor;
 
     /**
      * Creates a new Victor with the same X and Y components.

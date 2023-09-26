@@ -92,6 +92,10 @@ Victor.create = Victor
 
 Victor.fromCoord = Victor.fromObject
 
+Victor.fromSize = function (obj) {
+	return new Victor(obj.w || 0, obj.h || 0);
+};
+
 /**
  * # Manipulation
  *
