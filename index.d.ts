@@ -86,6 +86,8 @@ declare class Victor
      */
     toObject():VictorCoordinates;
 
+	toSize():VictorSize;
+
     /**
      * Adds another vector's X component to itself.
      * @param vector

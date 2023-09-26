@@ -96,6 +96,10 @@ Victor.fromSize = function (obj) {
 	return new Victor(obj.w || 0, obj.h || 0);
 };
 
+Victor.prototype.toSize= function () {
+	return {w: this.x, h: this.y};
+};
+
 /**
  * # Manipulation
  *
