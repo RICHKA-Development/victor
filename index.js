@@ -85,7 +85,7 @@ Victor.fromArray = function (arr) {
  * @api public
  */
 Victor.fromObject = function (obj) {
-	return new Victor(obj.x || 0, obj.y || 0);
+	return new Victor(obj?.x || 0, obj?.y || 0);
 };
 
 Victor.create = Victor
@@ -93,7 +93,7 @@ Victor.create = Victor
 Victor.fromCoord = Victor.fromObject
 
 Victor.fromSize = function (obj) {
-	return new Victor(obj.w || 0, obj.h || 0);
+	return new Victor(obj?.w || 0, obj?.h || 0);
 };
 
 Victor.prototype.toSize= function () {

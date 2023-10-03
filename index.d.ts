@@ -42,11 +42,11 @@ declare class Victor
      * Creates vector from object.
      * @param obj An object containing the X component in the x property and the Y component in the y property
      */
-    static fromObject(obj:VictorCoordinates):Victor;
+    static fromObject(obj:Partial<VictorCoordinates>):Victor;
 
-	static fromCoord(obj:VictorCoordinates):Victor;
+	static fromCoord(obj:Partial<VictorCoordinates>):Victor;
 
-	static fromSize(obj:VictorSize):Victor;
+	static fromSize(obj:Partial<VictorSize>):Victor;
 
     /**
      * Creates a new Victor with the same X and Y components.
