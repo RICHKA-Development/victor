@@ -1274,6 +1274,7 @@ Victor.prototype.toObject = function () {
 	return { x: this.x, y: this.y };
 };
 
+Victor.prototype.toCoord = Victor.prototype.toObject;
 
 var degrees = 180 / Math.PI;
 

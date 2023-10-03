@@ -86,6 +86,8 @@ declare class Victor
      */
     toObject():VictorCoordinates;
 
+	toCoord():VictorCoordinates;
+
 	toSize():VictorSize;
 
     /**
