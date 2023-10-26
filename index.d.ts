@@ -484,7 +484,7 @@ declare class Victor
 
 	map(fn:(number) => number):Victor;
 
-	let<T>(fn:(Victor) => Victor):T;
+	let(fn:(Victor) => T):T;
 
 	zero:Victor
 }
